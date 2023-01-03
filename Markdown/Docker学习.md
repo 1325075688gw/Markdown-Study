@@ -147,6 +147,10 @@
    推荐运行方式
    docker run -it -d --name mycentos centos
    docker run -it -d --name mycentos --rm centos
+   
+   `docker run -d --name mycentos --rm centos
+   `docker exec -it mycentos bash
+   - 这种方式启动后，即使进入容器，再exit，也不会退出容器
    ```
 
 2. docker run ：创建一个新的容器并运行一个命令（如果镜像没有，则会自动下载）
