@@ -16,3 +16,64 @@
 
 > 本文主要介绍Elasticsearch基础语法知识
 
+### 二、启动Elasticseach
+
+#### 1.本地启动
+
+##### 1.启动
+
+1. 前台启动
+
+   ```sh
+   1. cd /Elasticsearch/bin
+   2. ./elasticseach (一定需要./，不然运行不了)
+   ```
+
+2. 本地启动报错
+
+   - 问题
+
+     ```
+     [root@lysw vm]# curl 127.0.0.1:9200
+     curl: (52) Empty reply from server
+     ```
+
+   - 解决
+
+     ```
+     ##进入容器，修改/elasticsearch/config/elasticsearch.yml
+     [root@lysw config]# docker exec -it d31948cd75ef /bin/bash
+     elasticsearch@d31948cd75ef:~$ vi config/elasticsearch.yml
+     将其中的
+     xpack.security.enabled: true
+     #修改为，其他不要动，否则ES容器直接启动不了了
+     xpack.security.enabled: false
+     ```
+
+3. 后台启动
+
+   ```sh
+   ./elasticsearch -d
+   ```
+
+4. 启动之后，日志里面出现start
+
+##### 2.关闭
+
+1. 前台启动关闭方式
+
+   ```
+   直接关闭窗口
+   ```
+
+2. 后台启动关闭方式
+
+   ```sh
+   ps aux | grep elasticsearch
+   用户名之后的就是进程号
+   
+   kill -9 pid
+   ```
+
+#### 2.docker启动
+
