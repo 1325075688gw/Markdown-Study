@@ -2,6 +2,19 @@
 
 [TOC]
 
+### 一、简介
+
+#### 1.作者信息
+
+| 作者                                               | 视频链接                                                     | 备注 |
+| -------------------------------------------------- | ------------------------------------------------------------ | ---- |
+| [遇见狂神说](https://space.bilibili.com/95256449)  | [Typora](https://www.bilibili.com/video/BV12T4y1g7se/?spm_id_from=333.999.0.0) |      |
+| [编程不良人](https://space.bilibili.com/352224540) | [Typora]((https://www.bilibili.com/video/BV1DT4y1g7et/?spm_id_from=333.999.0.0&vd_source=58acbf449edd771737ee43a78ffdabf4)) |      |
+
+#### 2.本文主要内容
+
+> 本文主要介绍Typora使用技巧，及CSS样式修改
+
 ### 一、简单配置
 
 ##### 1.打开统计字数
@@ -55,4 +68,5 @@
 
 - ![图片名称\](图片链接)
 - <img src="/Users/gongwei/Library/Application Support/typora-user-images/image-20230101155316417.png" alt="图片" style="zoom:50%;" />
+
 
