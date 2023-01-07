@@ -12,6 +12,8 @@
 ssh-keygen -t rsa -C "1325075688@qq.com"
 
 然后一路点Enter
+
+(/Users/gongwei/.ssh/id_rsa)
 ```
 
 ### 二、第一次创建仓库
@@ -29,4 +31,10 @@ git remote add origin git@github.com:1325075688gw/Markdown-Study.git
 ```
 
 
+
+
+
+git 设置用户名和邮箱，单独项目设置，全局项目设置，优先级
+
+https://blog.csdn.net/bandaoyu/article/details/112968504
 
