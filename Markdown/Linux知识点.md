@@ -24,3 +24,18 @@
 
 4. ps -ef查看进程
 
+```
+mongo:
+#  url: "mongodb://127.0.0.1:27017/"
+  url: "mongodb://middleware-2.easycodedev.com:27017/"
+```
+
+Pt:	巴西
+
+hi：印度
+
+id：印尼
+
+
+
+事务
