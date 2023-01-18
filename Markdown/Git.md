@@ -12,8 +12,9 @@
 ssh-keygen -t rsa -C "1325075688@qq.com"
 
 然后一路点Enter
-
-(/Users/gongwei/.ssh/id_rsa)
+最后公钥保存的位置：cat ~/.ssh/id_rsa.pub
+设置用户名：git config --global user.name 'github用户名'
+设置邮箱：git config --global user.email 'github邮箱'
 ```
 
 ### 二、第一次创建仓库
@@ -22,7 +23,7 @@ ssh-keygen -t rsa -C "1325075688@qq.com"
 
 ##### 1.添加远程仓库地址
 
-```
+```a
 git remote add origin https://github.com/1325075688gw 不行
 
 

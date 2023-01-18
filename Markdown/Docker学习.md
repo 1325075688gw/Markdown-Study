@@ -255,7 +255,18 @@
    	`id` int ,
    	`name` varchar(32)
    )
+    ```
+   ```
+   创建MySQL容器：
+   docker run --name mymysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
    
+   -e可以重复，也就是可以配置多个参数,比如-e name=zhangsan -e age=10
+   
+   连接mysql数据库：
+   1.连接本地数据库 localhost -u空格后写密码，-p后面不用加空格直接写密码，
+   mysql -h localhost -u root -p123
+   2.也可以指定数据库（test数据库）
+   mysql -h localhost -u root -p123 -D test
    - show databases;
    - show tables;
    
@@ -994,7 +1005,8 @@ https://www.bilibili.com/video/BV1og4y1q7M4?p=30&spm_id_from=pageDriver&vd_sourc
 
    ```SH
    docker network create --driver bridge --subnet 172.20.0.0/16 --gateway 172.20.0.1 mynet
-   
+   docker network create --driver bridge --subnet 10.10.0.0/16 --gateway 10.10.0.1 mynet
+   10.10.10.170
    查询创建的网络详情：
    docker network inspect mynet
    ```
@@ -1042,6 +1054,14 @@ https://www.bilibili.com/video/BV1og4y1q7M4?p=30&spm_id_from=pageDriver&vd_sourc
    ```SH
    新创建一个网络，现在有两个网络了mynet、mynet01
    docker network create --driver bridge --subnet 172.20.0.0/16 --gateway 172.20.0.1 mynet01
+   
+   docker network create --driver bridge --subnet 172.20.0.0/16 --gateway 172.20.0.1 mynet
+   docker network create --driver bridge --subnet 10.10.0.0/16 --gateway 10.10.0.1 mynet
+   10.10.10.170
+   查询创建的网络详情：
+   docker network inspect mynet
+   
+   
    
    创建容器mycentos02（使用mynet01）
    docker run -it -d --name mycentos02 --rm --net mynet01 centos
