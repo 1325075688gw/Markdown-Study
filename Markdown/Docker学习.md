@@ -243,6 +243,19 @@
 
    配置启动参数进行启动，比如配置MySQL密码-e
 
+   ```markdown
+   - docker run --name mymysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+   
+   `-e可以重复，也就是可以配置多个参数,比如-e name=zhangsan -e age=10
+   
+   - mysql -u root -p123456 
+   ` 注意：-p和密码之间不应该有空格，默认的账号密码：root、123456
+   
+   create table `test_lock` (
+   	`id` int ,
+   	`name` varchar(32)
+   )
+    ```
    ```
    创建MySQL容器：
    docker run --name mymysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
@@ -254,6 +267,11 @@
    mysql -h localhost -u root -p123
    2.也可以指定数据库（test数据库）
    mysql -h localhost -u root -p123 -D test
+   - show databases;
+   - show tables;
+   
+   insert into test_lock(`id`, `name`) value(1, "zhangsan");
+   INSERT INTO t1(field1,field2) VALUES(v101,v102),(v201,v202),(v301,v302),(v401,v402);
    ```
 
    
